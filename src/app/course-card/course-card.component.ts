@@ -9,6 +9,7 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent implements OnInit {
   @Input() course!: Course;
+  @Input() cardIndex : number= 0;
   @Output('courseSelected') courseEmitter = new EventEmitter<Course>();
 
   ngOnInit(): void {}
