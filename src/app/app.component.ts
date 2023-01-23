@@ -8,8 +8,14 @@ import { Course } from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  courses = COURSES;
+  title = this.courses[0].description;
+  price = 9.99;
+  rate = 0.67;
 
-courses = COURSES;
+  course = this.courses[0];
+
+ startDate = new Date(2000,0,1);
 
   data = {
   title : 'Angular core deep dive'

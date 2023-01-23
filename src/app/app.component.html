@@ -1,4 +1,13 @@
 
-
-<app-course-card *ngFor="let course of courses; index as i"
- (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1"></app-course-card>
+<div>
+  <b> Start Date : {{startDate | date : 'dd MMM yyyy'}} </b> <br>
+  {{title | slice:0:7 }} <br>
+  <b>{{price | currency : 'EUR'}} </b> <br>
+  <b> {{rate | percent }} </b> <br/> <br/>
+  <div *ngFor="let pair of course | keyvalue">
+    {{pair.key + ':' + pair.value }}
+  </div>
+</div>
+<app-course-card *ngFor="let course of courses ; index as i"
+ (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i+1">
+</app-course-card>

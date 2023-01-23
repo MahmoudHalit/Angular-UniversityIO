@@ -17,8 +17,17 @@ export class CourseCardComponent implements OnInit {
   OnCourseViewed() {
     this.courseEmitter.emit(this.course);
   }
+
+  cardClasses():any {
+    if(this.course.category =='Beginner'){
+      return 'beginner';
+    }
+  }
+
+  cardStyles(){
+    return {
+      'text-decoration':'underline'
+    };
+  }
 }
 
-function Ouput() {
-  throw new Error('Function not implemented.');
-}

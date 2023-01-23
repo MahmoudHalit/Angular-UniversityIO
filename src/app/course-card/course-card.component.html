@@ -1,3 +1,13 @@
-<span><h2>{{cardIndex}} - {{course.description}}</h2></span>
+<div class="course-card" *ngIf="course" [ngClass]="cardClasses()">
+<div [ngStyle]="cardStyles()">
+  <span><h2>{{cardIndex}} - {{course.description}}</h2></span>
+</div>
 
+<div class="course-category" [ngSwitch]="course.category">
+     <div class="categorie" *ngSwitchCase="'Beginner'">Beginner</div>
+     <div class="categorie" *ngSwitchCase="'Advanced'">Advanced</div>
+     <div class="categorie" *ngSwitchDefault>Default</div>
+</div>
 <button (click)="OnCourseViewed()">View Course</button>
+
+</div>

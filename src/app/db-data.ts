@@ -22,4 +22,10 @@ export const COURSES: any = [
     category: 'Beginner',
     lessonsCount: 10,
   },
+  {
+    id: 4,
+    description: 'React from scratch',
+    category: 'Inermediate',
+    lessonsCount: 10,
+  }
 ];
